@@ -7,15 +7,21 @@
     <title>Сходи УЖ</title>
     <link rel="stylesheet" href="css/style.min.css" />
   </head>
-  <body class="body">
+  <body class="body" id="body">
     <div class="wrapper">
       @@include('html/header.html', {})
       <main class="main">
-        <div class="banner" style="background-image: url('@img/header-bg.jpg')">
-          <div class="banner__box">
-            <h1 class="banner__box-title">Сходи та двері</h1>
-            <p class="banner__box-text">під ключ по Закарпатській області. Надійність та затишок для вашої оселі!</p>
-            <a class="button" href="#">Замовити консультацію</a>
+        <div class="banner">
+          <div class="container">
+            <div class="banner__inner" style="background-image: url('@img/header-bg.jpg')">
+              <div class="banner__box">
+                <h1 class="banner__box-title">Сходи та двері</h1>
+                <p class="banner__box-text">
+                  під ключ по Закарпатській області. Надійність та затишок для вашої оселі!
+                </p>
+                <a class="button" href="#">Замовити консультацію</a>
+              </div>
+            </div>
           </div>
           <div class="modal">
             <div class="modal__wrap">
@@ -50,7 +56,7 @@
             </div>
           </div>
         </div>
-        <section class="about">
+        <section class="about" id="about">
           <div class="container">
             <div class="about__inner">
               <h2 class="about__title title">Про нас</h2>
@@ -71,11 +77,11 @@
         <div class="catalog">
           <div class="container">
             <div class="catalog__inner">
-              <a class="catalog__link" href="">
+              <a class="catalog__link" href="upstairs.html">
                 <img class="catalog__link-img" src="@img/upstairs.jpg" alt="catalog image" />
                 <span class="catalog__link-text">Сходи</span>
               </a>
-              <a class="catalog__link" href="">
+              <a class="catalog__link" href="doors.html">
                 <img class="catalog__link-img" src="@img/doors.jpg" alt="catalog image" />
                 <span class="catalog__link-text">Двері</span>
               </a>
@@ -92,15 +98,65 @@
                 </p>
               </div>
               <form class="registration__form" action="#" name="form">
-                <div><input class="registration__form-input" type="text" name="userName" placeholder="Ім’я" required /></div>
-                <div><input class="registration__form-input" type="text" name="userPpone" placeholder="Номер телефону" required /></div>
+                <div>
+                  <input class="registration__form-input" type="text" name="userName" placeholder="Ім’я" required />
+                </div>
+                <div>
+                  <input
+                    class="registration__form-input"
+                    type="text"
+                    name="userPpone"
+                    placeholder="Номер телефону"
+                    required
+                  />
+                </div>
                 <button class="registration__form-btn" type="submit">Відправити</button>
               </form>
             </div>
           </div>
         </section>
       </main>
-      @@include('html/footer.html', {})
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <a class="logo" href="#">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path
+                  d="M1.8 1.8H22C26.5287 1.8 30.2 5.47127 30.2 10V30.2H10C5.47127 30.2 1.8 26.5287 1.8 22V1.8Z"
+                  fill="white"
+                  stroke="#0285FF"
+                  stroke-width="3.6"
+                />
+              </svg>
+              Сходи УЖ
+            </a>
+            <div class="footer__lists">
+              <ul class="footer__list">
+                <li class="footer__list-item">
+                  <a class="footer__list-link scroll-to" href="#body">Головна</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link scroll-to" href="#about">Про нас</a>
+                </li>
+              </ul>
+              <ul class="footer__list">
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="upstairs.html">Сходи</a>
+                </li>
+                <li class="footer__list-item">
+                  <a class="footer__list-link" href="doors.html">Двері</a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__contacts">
+              <div class="footer__phone">
+                <a class="phone" href="tel:+380503724206">+380503724206</a>
+                <a class="button" href="#">Замовити консультацію</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
       <script src="js/app.min.js"></script>
     </div>
   </body>

@@ -12,6 +12,13 @@ $('.gallery__box').slick({
   responsive: [
     {
       breakpoint: 650,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+    {
+      breakpoint: 992,
       settings: 'unslick',
     },
   ],
@@ -22,13 +29,13 @@ const closePopUp = document.querySelector('.close');
 const popUp = document.querySelector('.modal');
 const popUpWrap = document.querySelector('.modal__wrap');
 const popUpBody = document.querySelector('.modal__body');
-const sendForm = document.querySelector('.registration__form-btn');
+const sendFormbtns = document.querySelectorAll('.registration__form-btn');
 const popUpSucs = document.querySelector('.modal-successful');
 const popUpBodySucs = document.querySelector('.modal-successful__body');
 const popUpWrapSucs = document.querySelector('.modal-successful__wrap');
 const popUpSucsBtn = document.querySelector('.modal-successful__btn');
 const popUpSucsClose = document.querySelector('.modal-successful__close');
-const body = document.querySelector('body');
+const body = document.body;
 
 openPopUpbtns.forEach(function (item) {
   item.addEventListener('click', function (e) {
@@ -38,6 +45,12 @@ openPopUpbtns.forEach(function (item) {
     body.classList.add('noscroll');
   });
 });
+
+const mobileMenuLinks = document.querySelectorAll('.nav__menu-link');
+mobileMenuLinks.forEach(function (item) {
+  item.addEventListener('click', MobileMenu);
+});
+
 popUpWrap.addEventListener('click', function () {
   popUp.classList.remove('active');
   popUpBody.classList.remove('active');
@@ -51,13 +64,15 @@ popUpWrapSucs.addEventListener('click', function () {
 popUpBody.addEventListener('click', function (e) {
   e.stopPropagation();
 });
-sendForm.addEventListener('click', function (e) {
-  e.preventDefault();
-  popUp.classList.remove('active');
-  popUpBody.classList.remove('active');
-  popUpSucs.classList.add('active');
-  popUpBodySucs.classList.add('active');
-  body.classList.add('noscroll');
+sendFormbtns.forEach(function (item) {
+  item.addEventListener('click', function (e) {
+    e.preventDefault();
+    popUp.classList.remove('active');
+    popUpBody.classList.remove('active');
+    popUpSucs.classList.add('active');
+    popUpBodySucs.classList.add('active');
+    body.classList.add('noscroll');
+  });
 });
 popUpSucsBtn.addEventListener('click', function () {
   popUpSucs.classList.remove('active');
@@ -80,22 +95,34 @@ popUpBodySucs.addEventListener('click', function (e) {
 
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.nav__box');
-const header = document.querySelector('.header');
 const phoneBtn = document.querySelector('.phone');
 const logo = document.querySelector('.logo');
+const header = document.querySelector('.header');
 
-function removeMobileMenu() {
-  menu.classList.remove('open');
-  header.classList.remove('open');
-  body.classList.remove('noscroll');
-  menuBtn.classList.remove('clicked');
+function MobileMenu() {
+  menu.classList.toggle('open');
+  body.classList.toggle('noscroll');
+  menuBtn.classList.toggle('clicked');
+  header.classList.toggle('open');
 }
 
-menuBtn.addEventListener('click', function () {
-  menuBtn.classList.toggle('clicked');
-  menu.classList.toggle('open');
-  header.classList.toggle('open');
-  body.classList.toggle('noscroll');
-});
-phoneBtn.addEventListener('click', removeMobileMenu);
-logo.addEventListener('click', removeMobileMenu);
+menuBtn.addEventListener('click', MobileMenu);
+phoneBtn.addEventListener('click', MobileMenu);
+logo.addEventListener('click', MobileMenu);
+
+const anchors = document.querySelectorAll('.scroll-to');
+
+for (let anchor of anchors) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    let href = this.getAttribute('href').substring(1);
+    const scrollTarget = document.getElementById(href);
+    const topOffset = document.querySelector('.nav').offsetHeight;
+    const elementPosition = scrollTarget.getBoundingClientRect().top;
+    const offsetPosition = elementPosition - topOffset;
+    window.scrollBy({
+      top: offsetPosition,
+      behavior: 'smooth',
+    });
+  });
+}

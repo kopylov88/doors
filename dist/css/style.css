@@ -884,6 +884,31 @@ body.noscroll {
   margin: 0 auto;
 }
 
+.up-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-image: url("../img/icons/up-arrow.svg");
+  background-repeat: no-repeat;
+  background-color: rgba(255, 255, 255, 0.5);
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  z-index: 1;
+  transition: 1s;
+}
+
+.up-btn.active {
+  opacity: 10;
+  visibility: visible;
+}
+
 @media (max-width: 1150px) {
   .footer__inner .logo {
     margin-right: 102px;

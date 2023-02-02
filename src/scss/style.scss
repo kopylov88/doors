@@ -457,7 +457,7 @@ body.noscroll {
   margin: 0 -8px;
 }
 .slick-slide {
-  margin:0 8px;
+  margin: 0 8px;
 }
 .registration-box {
   &__inner {
@@ -472,6 +472,29 @@ body.noscroll {
   }
   .button {
     margin: 0 auto;
+  }
+}
+.up-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background-image: url('@img/icons/up-arrow.svg');
+  background-repeat: no-repeat;
+  background-color: rgba(#fff, .5);
+  background-position: center;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  z-index: 1;
+  transition: 1s;
+  &.active {
+    opacity: 10;
+    visibility: visible;
   }
 }
 

@@ -126,3 +126,15 @@ for (let anchor of anchors) {
     });
   });
 }
+
+const upBtn = document.querySelector('.up-btn');
+
+window.addEventListener('scroll', function () {
+  upBtn.classList.toggle('active', window.scrollY > 500);
+});
+upBtn.addEventListener('click', function () {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+});

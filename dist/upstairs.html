@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Doors</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230202062046" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20230203003108" />
   </head>
   <body class="body" id="body">
     <div class="wrapper">
@@ -24,7 +24,7 @@
           </svg>
           Сходи УЖ
         </a>
-       <div class="nav__box">
+        <div class="nav__box">
           <ul class="nav__menu">
             <li class="nav__menu-item">
               <a href="index.html" class="nav__menu-link">Головна</a>
@@ -36,10 +36,13 @@
               <a href="doors.html" class="nav__menu-link">Двері</a>
             </li>
           </ul>
-          <div class="nav__phone">
-            <a class="phone" href="tel:+380503724206">+380503724206</a>
+          <div class="nav__phone-box">
+            <div class="nav__phone">
+              <a class="phone" href="tel:+380503724206">+380503724206</a>
+            </div>
+            <a class="button" href="#">Замовити консультацію</a>
           </div>
-       </div>
+        </div>
         <button class="menu-btn">
           <span></span>
           <span></span>
@@ -53,7 +56,7 @@
       <main class="main">
         <section class="gallery">
           <div class="container">
-            <div class="gallery__banner-title" style="background-image: url('img/upstairs-title.jpg')">
+            <div class="gallery__banner-title">
               <span>Cходи</span>
             </div>
             <div class="gallery__inner">
@@ -101,7 +104,7 @@
                       </p>
                       <form class="registration__form" action="#" name="form">
                         <div><input class="registration__form-input" type="text" name="userName" placeholder="Ім’я" required /></div>
-                        <div><input class="registration__form-input" type="text" name="userPpone" placeholder="Номер телефону" required /></div>
+                        <div><input class="registration__form-input" type="tel" name="userPpone" placeholder="Номер телефону" required /></div>
                         <button class="registration__form-btn" type="submit">Відправити</button>
                       </form>
                       <div class="close">
@@ -163,7 +166,7 @@
               </div>
               <form class="registration__form" action="#" name="form">
                 <div><input class="registration__form-input" type="text" name="userName" placeholder="Ім’я" required /></div>
-                <div><input class="registration__form-input" type="text" name="userPpone" placeholder="Номер телефону" required /></div>
+                <div><input class="registration__form-input" type="tel" name="userPpone" placeholder="Номер телефону" required /></div>
                 <button class="registration__form-btn" type="submit">Відправити</button>
               </form>
             </div>
@@ -205,7 +208,8 @@
   </div>
 </footer>
 
-      <script src="js/app.min.js?_v=20230202062046"></script>
+      <div class="up-btn"></div>
+      <script src="js/app.min.js?_v=20230203003108"></script>
     </div>
   </body>
 </html>

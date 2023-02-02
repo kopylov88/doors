@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Сходи УЖ</title>
-    <link rel="stylesheet" href="css/style.min.css?_v=20230202062046" />
+    <link rel="stylesheet" href="css/style.min.css?_v=20230203003108" />
   </head>
   <body class="body" id="body">
     <div class="wrapper">
@@ -24,7 +24,7 @@
           </svg>
           Сходи УЖ
         </a>
-       <div class="nav__box">
+        <div class="nav__box">
           <ul class="nav__menu">
             <li class="nav__menu-item">
               <a href="index.html" class="nav__menu-link">Головна</a>
@@ -36,10 +36,13 @@
               <a href="doors.html" class="nav__menu-link">Двері</a>
             </li>
           </ul>
-          <div class="nav__phone">
-            <a class="phone" href="tel:+380503724206">+380503724206</a>
+          <div class="nav__phone-box">
+            <div class="nav__phone">
+              <a class="phone" href="tel:+380503724206">+380503724206</a>
+            </div>
+            <a class="button" href="#">Замовити консультацію</a>
           </div>
-       </div>
+        </div>
         <button class="menu-btn">
           <span></span>
           <span></span>
@@ -53,7 +56,7 @@
       <main class="main">
         <div class="banner">
           <div class="container">
-            <div class="banner__inner" style="background-image: url('img/header-bg.jpg')">
+            <div class="banner__inner">
               <div class="banner__box">
                 <h1 class="banner__box-title">Сходи та двері</h1>
                 <p class="banner__box-text">
@@ -75,7 +78,7 @@
                 </p>
                 <form class="registration__form" action="#">
                   <input class="registration__form-input" type="text" placeholder="Ім’я" />
-                  <input class="registration__form-input" type="text" placeholder="Номер телефону" />
+                  <input class="registration__form-input" type="tel" placeholder="Номер телефону" />
                   <button class="registration__form-btn" type="submit">Відправити</button>
                 </form>
                 <span>Або зателефонуйте за номером</span>
@@ -137,15 +140,16 @@
                   Щоб замовити консультацію, заповніть форму з права, та ми зв’яжемось з вами найближчим часом!
                 </p>
               </div>
-              <form class="registration__form" action="#" name="form">
+              <form class="registration__form registration__form-bottom" action="#" name="form">
                 <div>
-                  <input class="registration__form-input" type="text" name="userName" placeholder="Ім’я" required />
+                  <input class="registration__form-input" type="text" name="userName" id="userName" placeholder="Ім’я" required />
                 </div>
                 <div>
                   <input
                     class="registration__form-input"
-                    type="text"
-                    name="userPpone"
+                    type="tel"
+                    name="userPhone"
+                    id="userPhone"
                     placeholder="Номер телефону"
                     required
                   />
@@ -157,7 +161,7 @@
         </section>
       </main>
       <footer class="footer">
-    <div class="container">
+  <div class="container">
     <div class="footer__inner">
       <a class="logo" href="#">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
@@ -190,8 +194,9 @@
     </div>
   </div>
 </footer>
+
       <div class="up-btn"></div>
-      <script src="js/app.min.js?_v=20230202062046"></script>
+      <script src="js/app.min.js?_v=20230203003108"></script>
     </div>
   </body>
 </html>

@@ -10,10 +10,6 @@ body.noscroll {
   position: fixed;
   z-index: 100;
   width: 100%;
-  background-color: #fff;
-  &.open {
-    height: 100vh;
-  }
 }
 .btn {
   width: 200px;
@@ -133,6 +129,7 @@ body.noscroll {
   }
 }
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
   max-width: 1280px;
@@ -171,15 +168,20 @@ body.noscroll {
       width: 100%;
     }
   }
-  &__phone {
+  &__phone-box {
     margin-left: auto;
+    .button {
+      display: none;
+    }
   }
 }
 .banner {
   &__inner {
     height: calc(100vh - 80px);
+    background-image: url('@img/header-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     border-radius: 20px;
     margin-top: 80px;
     margin-bottom: 42px;
@@ -393,12 +395,16 @@ body.noscroll {
     min-height: 360px;
     margin-top: 80px;
     margin-bottom: 42px;
+    background-image: url('@img/upstairs-title.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    &--doors {
+      background-image: url('@img/doors-title.jpg');
+    }
     span {
       color: #fff;
       font-weight: 500;
@@ -485,7 +491,7 @@ body.noscroll {
   border: 1px solid #000;
   background-image: url('@img/icons/up-arrow.svg');
   background-repeat: no-repeat;
-  background-color: rgba(#fff, .5);
+  background-color: rgba(#fff, 0.5);
   background-position: center;
   opacity: 0;
   visibility: hidden;

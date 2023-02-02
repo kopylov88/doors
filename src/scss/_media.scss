@@ -41,19 +41,25 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    padding-top: 128px;
+    top: 80px;
+    height: calc(100vh - 80px);
+    padding-top: 50px;
     padding-bottom: 24px;
-    transform: translateX(-100%);
+    transform: translateX(-200%);
     transition: 0.1s;
+    background-color: #fff;
     &.open {
       transform: translateX(0);
+      .nav__phone-box {
+        margin-left: 0;
+        width: 100%;
+      }
+      .button {
+        max-width: 100%;
+        display: flex;
+        margin-top: 24px;
+      }
     }
-  }
-  .nav__phone {
-    margin-left: 0;
   }
   .nav__menu {
     flex-direction: column;
@@ -113,6 +119,15 @@
   }
   .slick-list {
     padding: 0 15% 0 0;
+  }
+  .banner__inner {
+    background-image: url('@img/header-bg-min.jpg');
+  }
+  .gallery__banner-title {
+    background-image: url('@img/upstairs-title-min.jpg');
+  }
+  .gallery__banner-title--doors {
+    background-image: url('@img/doors-title-min.jpg');
   }
 }
 @media (max-width: 400px) {

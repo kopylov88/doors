@@ -1,6 +1,9 @@
 import * as myFunctions from './modules/functions.js';
 import $ from 'jquery';
 import 'slick-carousel';
+import Inputmask from 'inputmask';
+import JustValidate from 'just-validate';
+
 myFunctions.isWebp();
 
 $('.gallery__box').slick({
@@ -29,12 +32,12 @@ const closePopUp = document.querySelector('.close');
 const popUp = document.querySelector('.modal');
 const popUpWrap = document.querySelector('.modal__wrap');
 const popUpBody = document.querySelector('.modal__body');
-const sendFormbtns = document.querySelectorAll('.registration__form-btn');
-const popUpSucs = document.querySelector('.modal-successful');
-const popUpBodySucs = document.querySelector('.modal-successful__body');
-const popUpWrapSucs = document.querySelector('.modal-successful__wrap');
-const popUpSucsBtn = document.querySelector('.modal-successful__btn');
-const popUpSucsClose = document.querySelector('.modal-successful__close');
+// const sendFormBtns = document.querySelectorAll('.registration__form-btn');
+const popUpSent = document.querySelector('.modal-successful');
+const popUpBodySent = document.querySelector('.modal-successful__body');
+const popUpWrapSent = document.querySelector('.modal-successful__wrap');
+const popUpSentBtn = document.querySelector('.modal-successful__btn');
+const popUpSentClose = document.querySelector('.modal-successful__close');
 const body = document.body;
 
 openPopUpbtns.forEach(function (item) {
@@ -43,12 +46,15 @@ openPopUpbtns.forEach(function (item) {
     popUp.classList.add('active');
     popUpBody.classList.add('active');
     body.classList.add('noscroll');
+    menu.classList.remove('open');
+    body.classList.remove('noscroll');
+    menuBtn.classList.remove('clicked');
   });
 });
 
 const mobileMenuLinks = document.querySelectorAll('.nav__menu-link');
 mobileMenuLinks.forEach(function (item) {
-  item.addEventListener('click', MobileMenu);
+  item.addEventListener('click', toggleMobileMenu);
 });
 
 popUpWrap.addEventListener('click', function () {
@@ -56,79 +62,52 @@ popUpWrap.addEventListener('click', function () {
   popUpBody.classList.remove('active');
   body.classList.remove('noscroll');
 });
-popUpWrapSucs.addEventListener('click', function () {
-  popUpSucs.classList.remove('active');
-  popUpBodySucs.classList.remove('active');
+popUpWrapSent.addEventListener('click', function () {
+  popUpSent.classList.remove('active');
+  popUpBodySent.classList.remove('active');
   body.classList.remove('noscroll');
 });
 popUpBody.addEventListener('click', function (e) {
   e.stopPropagation();
 });
-sendFormbtns.forEach(function (item) {
-  item.addEventListener('click', function (e) {
-    e.preventDefault();
-    popUp.classList.remove('active');
-    popUpBody.classList.remove('active');
-    popUpSucs.classList.add('active');
-    popUpBodySucs.classList.add('active');
-    body.classList.add('noscroll');
-  });
+popUpBodySent.addEventListener('click', function (e) {
+  e.stopPropagation();
 });
-popUpSucsBtn.addEventListener('click', function () {
-  popUpSucs.classList.remove('active');
-  popUpBodySucs.classList.remove('active');
+
+
+popUpSentBtn.addEventListener('click', function () {
+  popUpSent.classList.remove('active');
+  popUpBodySent.classList.remove('active');
   body.classList.remove('noscroll');
 });
+
 closePopUp.addEventListener('click', function () {
   popUpBody.classList.remove('active');
   popUp.classList.remove('active');
   body.classList.remove('noscroll');
 });
-popUpSucsClose.addEventListener('click', function () {
-  popUpSucs.classList.remove('active');
-  popUpBodySucs.classList.remove('active');
+popUpSentClose.addEventListener('click', function () {
+  popUpSent.classList.remove('active');
+  popUpBodySent.classList.remove('active');
   body.classList.remove('noscroll');
 });
-popUpBodySucs.addEventListener('click', function (e) {
-  e.stopPropagation();
-});
+
 
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.nav__box');
 const phoneBtn = document.querySelector('.phone');
 const logo = document.querySelector('.logo');
-const header = document.querySelector('.header');
 
-function MobileMenu() {
+function toggleMobileMenu() {
   menu.classList.toggle('open');
   body.classList.toggle('noscroll');
   menuBtn.classList.toggle('clicked');
-  header.classList.toggle('open');
 }
-
-menuBtn.addEventListener('click', MobileMenu);
-phoneBtn.addEventListener('click', MobileMenu);
-logo.addEventListener('click', MobileMenu);
-
-const anchors = document.querySelectorAll('.scroll-to');
-
-for (let anchor of anchors) {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    let href = this.getAttribute('href').substring(1);
-    const scrollTarget = document.getElementById(href);
-    const topOffset = document.querySelector('.nav').offsetHeight;
-    const elementPosition = scrollTarget.getBoundingClientRect().top;
-    const offsetPosition = elementPosition - topOffset;
-    window.scrollBy({
-      top: offsetPosition,
-      behavior: 'smooth',
-    });
-  });
-}
+menuBtn.addEventListener('click', toggleMobileMenu);
+phoneBtn.addEventListener('click', toggleMobileMenu);
+logo.addEventListener('click', toggleMobileMenu);
 
 const upBtn = document.querySelector('.up-btn');
-
 window.addEventListener('scroll', function () {
   upBtn.classList.toggle('active', window.scrollY > 500);
 });
@@ -138,3 +117,23 @@ upBtn.addEventListener('click', function () {
     behavior: 'smooth',
   });
 });
+
+let inputs = document.querySelectorAll("input[type='tel']");
+let im = new Inputmask('+7 (999) 999-99-99');
+im.mask(inputs);
+
+const validation = new JustValidate('.registration__form-bottom');
+
+validation
+  .addField('#userName', [
+    {
+      rule: 'required',
+      errorMessage: 'Заповніть це поле',
+    },
+  ])
+  .addField('#userPhone', [
+    {
+      rule: 'required',
+      errorMessage: 'Заповніть це поле',
+    },
+  ]);

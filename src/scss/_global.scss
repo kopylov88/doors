@@ -1,3 +1,15 @@
+input::-webkit-input-placeholder       {opacity: 1; transition: opacity 0.3s ease;}
+input::-moz-placeholder                {opacity: 1; transition: opacity 0.3s ease;}
+input:-moz-placeholder                 {opacity: 1; transition: opacity 0.3s ease;}
+input:-ms-input-placeholder            {opacity: 1; transition: opacity 0.3s ease;}
+input:focus::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+input:focus::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+input:focus:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: 'Inter', sans-serif;
   font-weight: 400;
@@ -73,7 +85,7 @@ body {
   display: none;
   flex-direction: column;
   justify-content: space-between;
-  height: 20px;
+  min-height: 20px;
   span {
     width: 30px;
     height: 3px;

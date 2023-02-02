@@ -13,7 +13,7 @@
       <main class="main">
         <div class="banner">
           <div class="container">
-            <div class="banner__inner" style="background-image: url('@img/header-bg.jpg')">
+            <div class="banner__inner">
               <div class="banner__box">
                 <h1 class="banner__box-title">Сходи та двері</h1>
                 <p class="banner__box-text">
@@ -35,7 +35,7 @@
                 </p>
                 <form class="registration__form" action="#">
                   <input class="registration__form-input" type="text" placeholder="Ім’я" />
-                  <input class="registration__form-input" type="text" placeholder="Номер телефону" />
+                  <input class="registration__form-input" type="tel" placeholder="Номер телефону" />
                   <button class="registration__form-btn" type="submit">Відправити</button>
                 </form>
                 <span>Або зателефонуйте за номером</span>
@@ -97,15 +97,16 @@
                   Щоб замовити консультацію, заповніть форму з права, та ми зв’яжемось з вами найближчим часом!
                 </p>
               </div>
-              <form class="registration__form" action="#" name="form">
+              <form class="registration__form registration__form-bottom" action="#" name="form">
                 <div>
-                  <input class="registration__form-input" type="text" name="userName" placeholder="Ім’я" required />
+                  <input class="registration__form-input" type="text" name="userName" id="userName" placeholder="Ім’я" required />
                 </div>
                 <div>
                   <input
                     class="registration__form-input"
-                    type="text"
-                    name="userPpone"
+                    type="tel"
+                    name="userPhone"
+                    id="userPhone"
                     placeholder="Номер телефону"
                     required
                   />

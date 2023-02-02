@@ -13,7 +13,7 @@
       <main class="main">
         <section class="gallery">
           <div class="container">
-            <div class="gallery__banner-title" style="background-image: url('@img/upstairs-title.jpg')">
+            <div class="gallery__banner-title">
               <span>Cходи</span>
             </div>
             <div class="gallery__inner">
@@ -61,7 +61,7 @@
                       </p>
                       <form class="registration__form" action="#" name="form">
                         <div><input class="registration__form-input" type="text" name="userName" placeholder="Ім’я" required /></div>
-                        <div><input class="registration__form-input" type="text" name="userPpone" placeholder="Номер телефону" required /></div>
+                        <div><input class="registration__form-input" type="tel" name="userPpone" placeholder="Номер телефону" required /></div>
                         <button class="registration__form-btn" type="submit">Відправити</button>
                       </form>
                       <div class="close">
@@ -123,7 +123,7 @@
               </div>
               <form class="registration__form" action="#" name="form">
                 <div><input class="registration__form-input" type="text" name="userName" placeholder="Ім’я" required /></div>
-                <div><input class="registration__form-input" type="text" name="userPpone" placeholder="Номер телефону" required /></div>
+                <div><input class="registration__form-input" type="tel" name="userPpone" placeholder="Номер телефону" required /></div>
                 <button class="registration__form-btn" type="submit">Відправити</button>
               </form>
             </div>
@@ -131,6 +131,7 @@
         </section>
       </main>
       @@include('html/footer.html', {})
+      <div class="up-btn"></div>
       <script src="js/app.min.js"></script>
     </div>
   </body>

@@ -7,9 +7,9 @@ body.noscroll {
   overflow: hidden;
 }
 .header {
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 100;
-  width: 100%;
 }
 .btn {
   width: 200px;
@@ -129,10 +129,8 @@ body.noscroll {
   }
 }
 .nav {
-  position: relative;
   display: flex;
   align-items: center;
-  max-width: 1280px;
   min-height: 80px;
   width: 100%;
   background-color: #fff;
@@ -183,7 +181,6 @@ body.noscroll {
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    margin-top: 80px;
     margin-bottom: 42px;
     position: relative;
   }
@@ -399,7 +396,6 @@ body.noscroll {
 .gallery {
   &__banner-title {
     min-height: 360px;
-    margin-top: 80px;
     margin-bottom: 42px;
     background-image: url('@img/upstairs-title.jpg');
     background-repeat: no-repeat;

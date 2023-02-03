@@ -74,7 +74,6 @@ popUpBodySent.addEventListener('click', function (e) {
   e.stopPropagation();
 });
 
-
 popUpSentBtn.addEventListener('click', function () {
   popUpSent.classList.remove('active');
   popUpBodySent.classList.remove('active');
@@ -91,7 +90,6 @@ popUpSentClose.addEventListener('click', function () {
   popUpBodySent.classList.remove('active');
   body.classList.remove('noscroll');
 });
-
 
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.nav__box');
@@ -122,8 +120,7 @@ let inputs = document.querySelectorAll("input[type='tel']");
 let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(inputs);
 
-const validation = new JustValidate('.registration__form-bottom');
-
+const validation = new JustValidate('#registration__form-popup');
 validation
   .addField('#userName', [
     {
@@ -138,12 +135,17 @@ validation
     },
   ]);
 
-// function validateForms (selector, rules) {
-//   new JustValidate (selector, {
-//     rules: rules,
-//     submitHandler: function(form) {
-//       console.log(form)
-//     }
-//   })
-// }
-// validateForms('.registration__form-bottom', {userName:{required:true}, userPhone:{required:true}});
+const validation2 = new JustValidate('#registration__form');
+validation2
+  .addField('#userName', [
+    {
+      rule: 'required',
+      errorMessage: 'Заповніть це поле',
+    },
+  ])
+  .addField('#userPhone', [
+    {
+      rule: 'required',
+      errorMessage: 'Заповніть це поле',
+    },
+  ]);

@@ -286,7 +286,13 @@ body.noscroll {
   }
   &__content-text {
   }
-  &__form {
+  &__form{
+    max-width: 627px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  &__form-bottom {
     max-width: 627px;
     width: 100%;
     display: flex;
@@ -295,7 +301,7 @@ body.noscroll {
   &__form-input {
     width: 100%;
     background-color: #ebebeb;
-    margin-bottom: 24px;
+    margin-bottom: 10px;
     padding: 15px 20px;
     border-radius: 8px;
     transition: 0.3s;
@@ -502,6 +508,9 @@ body.noscroll {
     opacity: 10;
     visibility: visible;
   }
+}
+.just-validate-error-label {
+  margin-bottom: 24px;
 }
 
 @import 'media';

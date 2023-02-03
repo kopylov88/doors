@@ -137,3 +137,13 @@ validation
       errorMessage: 'Заповніть це поле',
     },
   ]);
+
+// function validateForms (selector, rules) {
+//   new JustValidate (selector, {
+//     rules: rules,
+//     submitHandler: function(form) {
+//       console.log(form)
+//     }
+//   })
+// }
+// validateForms('.registration__form-bottom', {userName:{required:true}, userPhone:{required:true}});

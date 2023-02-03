@@ -531,7 +531,6 @@ body.noscroll {
 .nav {
   display: flex;
   align-items: center;
-  max-width: 1280px;
   min-height: 80px;
   width: 100%;
   background-color: #fff;
@@ -848,7 +847,6 @@ body.noscroll {
 
 .gallery__banner-title {
   min-height: 360px;
-  margin-top: 80px;
   margin-bottom: 42px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1043,7 +1041,6 @@ body.noscroll {
     transform: translateX(-200%);
     transition: 0.1s;
     background-color: #fff;
-    overflow: auto;
   }
 
   .nav__box.open {
@@ -1089,6 +1086,18 @@ body.noscroll {
     margin-left: 0;
   }
 
+  .banner__box-title {
+    font-size: 42px;
+  }
+
+  .banner__box {
+    max-width: 313px;
+    padding: 0;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
   .catalog__inner {
     flex-direction: column;
     row-gap: 16px;
@@ -1126,22 +1135,22 @@ body.noscroll {
   .nowebp .banner__inner {
     background-image: url("../img/header-bg-min.jpg"); }
 
+  .banner__inner {
+    background-position: center;
+  }
+
   .nowebp .gallery__banner-title {
     background-image: url("../img/upstairs-title-min.jpg"); }
+
+  .gallery__banner-title {
+    background-position: center;
+  }
 
   .nowebp .gallery__banner-title--doors {
     background-image: url("../img/doors-title-min.jpg"); }
 
-  .banner__box {
-    max-width: 313px;
-    padding: 0;
-    background-color: transparent;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-  }
-
-  .banner__box-title {
-    font-size: 42px;
+  .gallery__banner-title--doors {
+    background-position: center;
   }
 }
 

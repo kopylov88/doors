@@ -386,9 +386,9 @@ body.noscroll {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
+  top: 0;
   z-index: 100;
-  width: 100%;
 }
 
 .btn {
@@ -529,7 +529,6 @@ body.noscroll {
 }
 
 .nav {
-  position: relative;
   display: flex;
   align-items: center;
   max-width: 1280px;
@@ -591,7 +590,6 @@ body.noscroll {
   background-size: cover;
   background-position: center;
   border-radius: 20px;
-  margin-top: 80px;
   margin-bottom: 42px;
   position: relative;
 }
@@ -1038,12 +1036,14 @@ body.noscroll {
     justify-content: space-between;
     align-items: flex-start;
     top: 80px;
+    left: 0;
+    right: 0;
     height: calc(100vh - 80px);
-    padding-top: 50px;
-    padding-bottom: 24px;
+    padding: 50px 16px 24px;
     transform: translateX(-200%);
     transition: 0.1s;
     background-color: #fff;
+    overflow: auto;
   }
 
   .nav__box.open {
@@ -1089,18 +1089,6 @@ body.noscroll {
     margin-left: 0;
   }
 
-  .banner__box-title {
-    font-size: 42px;
-  }
-
-  .banner__box {
-    max-width: 313px;
-    padding: 0;
-    background-color: transparent;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-  }
-
   .catalog__inner {
     flex-direction: column;
     row-gap: 16px;
@@ -1143,6 +1131,18 @@ body.noscroll {
 
   .nowebp .gallery__banner-title--doors {
     background-image: url("../img/doors-title-min.jpg"); }
+
+  .banner__box {
+    max-width: 313px;
+    padding: 0;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .banner__box-title {
+    font-size: 42px;
+  }
 }
 
 @media (max-width: 400px) {

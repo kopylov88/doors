@@ -722,10 +722,17 @@ body.noscroll {
   flex-direction: column;
 }
 
+.registration__form-bottom {
+  max-width: 627px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .registration__form-input {
   width: 100%;
   background-color: #ebebeb;
-  margin-bottom: 24px;
+  margin-bottom: 10px;
   padding: 15px 20px;
   border-radius: 8px;
   transition: 0.3s;
@@ -969,6 +976,10 @@ body.noscroll {
 .up-btn.active {
   opacity: 10;
   visibility: visible;
+}
+
+.just-validate-error-label {
+  margin-bottom: 24px;
 }
 
 @media (max-width: 1150px) {

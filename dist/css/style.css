@@ -1,5 +1,7 @@
 /* Reset and base styles  */
 
+@import '../../node_modules/animate.css/animate.min.css';
+
 * {
   padding: 0px;
   margin: 0px;
@@ -602,7 +604,7 @@ body.noscroll {
   display: none;
 }
 
-.nowebp .banner__inner {
+.nowebp .banner__inner{
   background-image: url("../img/header-bg.jpg"); }
 
 .banner__inner {
@@ -865,7 +867,7 @@ body.noscroll {
   font-size: 19px;
 }
 
-.nowebp .gallery__banner-title {
+.nowebp .gallery__banner-title{
   background-image: url("../img/upstairs-title.jpg"); }
 
 .gallery__banner-title {
@@ -879,7 +881,7 @@ body.noscroll {
   align-items: center;
 }
 
-.nowebp .gallery__banner-title--doors {
+.nowebp .gallery__banner-title--doors{
   background-image: url("../img/doors-title.jpg"); }
 
 .gallery__banner-title span {
@@ -905,6 +907,7 @@ body.noscroll {
   height: 440px;
   border-radius: 18px;
   overflow: hidden;
+  transition: 0.3s;
 }
 
 .gallery__box-item img {
@@ -912,6 +915,11 @@ body.noscroll {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.gallery__box-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 5px 5px #757575;
 }
 
 .gallery__box-item-doors {
@@ -980,7 +988,7 @@ body.noscroll {
   height: 40px;
   padding: 5px;
   border-radius: 50%;
-  border: 1px solid #000;
+  border: 1px solid #ccc;
   background-image: url("../img/icons/up-arrow.svg");
   background-repeat: no-repeat;
   background-color: rgba(255, 255, 255, 0.5);
@@ -990,11 +998,28 @@ body.noscroll {
   cursor: pointer;
   z-index: 1;
   transition: 1s;
+  animation-name: upbtn-animation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 .up-btn.active {
   opacity: 10;
   visibility: visible;
+}
+
+@keyframes upbtn-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 .just-validate-error-label {
@@ -1173,21 +1198,21 @@ body.noscroll {
     padding: 0 15% 0 0;
   }
 
-  .nowebp .banner__inner {
+  .nowebp .banner__inner{
     background-image: url("../img/header-bg-min.jpg"); }
 
   .banner__inner {
     background-position: center;
   }
 
-  .nowebp .gallery__banner-title {
+  .nowebp .gallery__banner-title{
     background-image: url("../img/upstairs-title-min.jpg"); }
 
   .gallery__banner-title {
     background-position: center;
   }
 
-  .nowebp .gallery__banner-title--doors {
+  .nowebp .gallery__banner-title--doors{
     background-image: url("../img/doors-title-min.jpg"); }
 
   .gallery__banner-title--doors {
@@ -1236,23 +1261,23 @@ body.noscroll {
   }
 }
 
-.webp .banner__inner { background-image: url(../img/header-bg.webp); }
+.webp .banner__inner{ background-image: url(../img/header-bg.webp); }
 
-.webp .gallery__banner-title { background-image: url(../img/upstairs-title.webp); }
+.webp .gallery__banner-title{ background-image: url(../img/upstairs-title.webp); }
 
-.webp .gallery__banner-title--doors { background-image: url(../img/doors-title.webp); }
+.webp .gallery__banner-title--doors{ background-image: url(../img/doors-title.webp); }
 
-@media (max-width: 650px) {
+@media (max-width: 650px){
 
-  .webp .banner__inner { background-image: url(../img/header-bg-min.webp); }
+  .webp .banner__inner{ background-image: url(../img/header-bg-min.webp); }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 650px){
 
-  .webp .gallery__banner-title { background-image: url(../img/upstairs-title-min.webp); }
+  .webp .gallery__banner-title{ background-image: url(../img/upstairs-title-min.webp); }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 650px){
 
-  .webp .gallery__banner-title--doors { background-image: url(../img/doors-title-min.webp); }
+  .webp .gallery__banner-title--doors{ background-image: url(../img/doors-title-min.webp); }
 }

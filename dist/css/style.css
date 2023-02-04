@@ -1062,7 +1062,7 @@ body.noscroll {
     height: calc(100vh - 80px);
     padding: 50px 16px 24px;
     transform: translateX(-200%);
-    transition: 0.1s;
+    transition: 0.5s;
     background-color: #fff;
   }
 

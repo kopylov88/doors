@@ -365,6 +365,10 @@ body {
   transition: 0.3s;
 }
 
+.error {
+  color: #EE505A;
+}
+
 @font-face {
   font-family: Inter;
   font-display: swap;
@@ -721,11 +725,8 @@ body.noscroll {
   flex-direction: column;
 }
 
-.registration__form-bottom {
-  max-width: 627px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+.registration__form-item {
+  padding-bottom: 15px;
 }
 
 .registration__form-input {

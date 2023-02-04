@@ -266,10 +266,6 @@ input:focus:-ms-input-placeholder {
   transition: opacity 0.3s ease;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
@@ -306,11 +302,11 @@ body {
   transition: 0.3s;
 }
 
-.logo:hover path {
+.no-touch .logo:hover path {
   fill: #0285ff;
 }
 
-.logo:active path {
+.no-touch .logo:active path {
   fill: #1300e8;
   stroke: #1300e8;
 }
@@ -628,6 +624,10 @@ body.noscroll {
 
 .about {
   padding-bottom: 42px;
+}
+
+.about__inner .button {
+  display: none;
 }
 
 .about__title {
@@ -1093,6 +1093,10 @@ body.noscroll {
     font-size: 42px;
   }
 
+  .banner__box-text {
+    font-size: 16px;
+  }
+
   .banner__box {
     max-width: 313px;
     padding: 0;
@@ -1162,21 +1166,39 @@ body.noscroll {
   .modal-successful__body {
     padding: 15px;
   }
-}
-
-@media (max-width: 340px) {
-  .banner {
-    height: calc(100vh - 150px);
-    margin-bottom: 80px;
-  }
-
-  .banner__box {
-    max-width: 290px;
-    margin-bottom: -150px;
-  }
 
   .banner__box-title {
     font-size: 36px;
+  }
+
+  .banner__box-text {
+    margin-bottom: 0;
+  }
+
+  .banner__inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 16px;
+    margin-bottom: 0;
+  }
+
+  .banner__box {
+    position: static;
+    height: auto;
+  }
+
+  .banner__box .button {
+    display: none;
+  }
+
+  .about__inner .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin-bottom: 60px;
+    margin-top: 12px;
   }
 }
 

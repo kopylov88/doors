@@ -481,7 +481,9 @@ body.noscroll {
 
 .modal__body span,
 .modal-successful__body span {
+  display: inline-block;
   margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 .modal-successful__body {
@@ -1124,6 +1126,10 @@ body.noscroll {
     backdrop-filter: none;
   }
 
+  .catalog {
+    padding-top: 42px;
+  }
+
   .catalog__inner {
     flex-direction: column;
     row-gap: 16px;
@@ -1136,6 +1142,15 @@ body.noscroll {
 
   .title {
     font-size: 32px;
+  }
+
+  .about {
+    padding-bottom: 18px;
+  }
+
+  .registration {
+    padding-top: 18px;
+    padding-bottom: 60px;
   }
 }
 
@@ -1200,6 +1215,7 @@ body.noscroll {
     align-items: flex-end;
     padding: 16px;
     margin-bottom: 0;
+    height: calc(100vh - 155px);
   }
 
   .banner__box {

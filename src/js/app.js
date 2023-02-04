@@ -2,7 +2,7 @@ import * as myFunctions from './modules/functions.js';
 import $ from 'jquery';
 import 'slick-carousel';
 import Inputmask from 'inputmask';
-import JustValidate from 'just-validate';
+import 'jquery-validation';
 
 myFunctions.isWebp();
 
@@ -32,23 +32,46 @@ const closePopUp = document.querySelector('.close');
 const popUp = document.querySelector('.modal');
 const popUpWrap = document.querySelector('.modal__wrap');
 const popUpBody = document.querySelector('.modal__body');
-// const sendFormBtns = document.querySelectorAll('.registration__form-btn');
 const popUpSent = document.querySelector('.modal-successful');
 const popUpBodySent = document.querySelector('.modal-successful__body');
 const popUpWrapSent = document.querySelector('.modal-successful__wrap');
 const popUpSentBtn = document.querySelector('.modal-successful__btn');
-const popUpSentClose = document.querySelector('.modal-successful__close');
+const closePopUpSent = document.querySelector('.modal-successful__close');
 const body = document.body;
+
+function openPopup() {
+  popUp.classList.add('active');
+  popUpBody.classList.add('active');
+  body.classList.add('noscroll');
+  menu.classList.remove('open');
+  body.classList.remove('noscroll');
+  menuBtn.classList.remove('clicked');
+}
+function openPopupSent () {
+  popUpSent.classList.add('active');
+  popUpBodySent.classList.add('active');
+  body.classList.add('noscroll');
+}
+function closePopup() {
+  popUp.classList.remove('active');
+  popUpBody.classList.remove('active');
+  body.classList.remove('noscroll');
+}
+function closePopupSent() {
+  popUpSent.classList.remove('active');
+  popUpBodySent.classList.remove('active');
+  body.classList.remove('noscroll');
+}
+function toggleMobileMenu() {
+  menu.classList.toggle('open');
+  body.classList.toggle('noscroll');
+  menuBtn.classList.toggle('clicked');
+}
 
 openPopUpbtns.forEach(function (item) {
   item.addEventListener('click', function (e) {
     e.preventDefault();
-    popUp.classList.add('active');
-    popUpBody.classList.add('active');
-    body.classList.add('noscroll');
-    menu.classList.remove('open');
-    body.classList.remove('noscroll');
-    menuBtn.classList.remove('clicked');
+    openPopup();
   });
 });
 
@@ -57,50 +80,24 @@ mobileMenuLinks.forEach(function (item) {
   item.addEventListener('click', toggleMobileMenu);
 });
 
-popUpWrap.addEventListener('click', function () {
-  popUp.classList.remove('active');
-  popUpBody.classList.remove('active');
-  body.classList.remove('noscroll');
-});
-popUpWrapSent.addEventListener('click', function () {
-  popUpSent.classList.remove('active');
-  popUpBodySent.classList.remove('active');
-  body.classList.remove('noscroll');
-});
+popUpWrap.addEventListener('click', closePopup);
+popUpWrapSent.addEventListener('click', closePopupSent);
 popUpBody.addEventListener('click', function (e) {
   e.stopPropagation();
 });
 popUpBodySent.addEventListener('click', function (e) {
   e.stopPropagation();
 });
+popUpSentBtn.addEventListener('click', closePopupSent);
 
-popUpSentBtn.addEventListener('click', function () {
-  popUpSent.classList.remove('active');
-  popUpBodySent.classList.remove('active');
-  body.classList.remove('noscroll');
-});
-
-closePopUp.addEventListener('click', function () {
-  popUpBody.classList.remove('active');
-  popUp.classList.remove('active');
-  body.classList.remove('noscroll');
-});
-popUpSentClose.addEventListener('click', function () {
-  popUpSent.classList.remove('active');
-  popUpBodySent.classList.remove('active');
-  body.classList.remove('noscroll');
-});
+closePopUp.addEventListener('click', closePopup);
+closePopUpSent.addEventListener('click',closePopupSent);
 
 const menuBtn = document.querySelector('.menu-btn');
 const menu = document.querySelector('.nav__box');
 const phoneBtn = document.querySelector('.phone');
 const logo = document.querySelector('.logo');
 
-function toggleMobileMenu() {
-  menu.classList.toggle('open');
-  body.classList.toggle('noscroll');
-  menuBtn.classList.toggle('clicked');
-}
 menuBtn.addEventListener('click', toggleMobileMenu);
 phoneBtn.addEventListener('click', toggleMobileMenu);
 logo.addEventListener('click', toggleMobileMenu);
@@ -120,32 +117,48 @@ let inputs = document.querySelectorAll("input[type='tel']");
 let im = new Inputmask('+7 (999) 999-99-99');
 im.mask(inputs);
 
-const validation = new JustValidate('#registration__form-popup');
-validation
-  .addField('#userName', [
-    {
-      rule: 'required',
-      errorMessage: 'Заповніть це поле',
+$('#registration__form-popup').validate({
+  rules: {
+    userName: {
+      required: true,
     },
-  ])
-  .addField('#userPhone', [
-    {
-      rule: 'required',
-      errorMessage: 'Заповніть це поле',
+    userPhone: {
+      required: true,
     },
-  ]);
+  },
+  messages: {
+    userName: {
+      required: 'Заповніть це поле',
+    },
+    userPhone: {
+      required: 'Заповніть це поле',
+    },
+  },
+  submitHandler: function () {
+    closePopup();
+    openPopupSent();
+  },
+});
 
-const validation2 = new JustValidate('#registration__form');
-validation2
-  .addField('#userName', [
-    {
-      rule: 'required',
-      errorMessage: 'Заповніть це поле',
+$('#registration__form').validate({
+  rules: {
+    userName: {
+      required: true,
     },
-  ])
-  .addField('#userPhone', [
-    {
-      rule: 'required',
-      errorMessage: 'Заповніть це поле',
+    userPhone: {
+      required: true,
     },
-  ]);
+  },
+  messages: {
+    userName: {
+      required: 'Заповніть це поле',
+    },
+    userPhone: {
+      required: 'Заповніть це поле',
+    },
+  },
+  submitHandler: function () {
+    closePopup();
+    openPopupSent();
+  },
+});

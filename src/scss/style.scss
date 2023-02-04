@@ -291,11 +291,8 @@ body.noscroll {
     display: flex;
     flex-direction: column;
   }
-  &__form-bottom {
-    max-width: 627px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
+  &__form-item {
+    padding-bottom: 15px;
   }
   &__form-input {
     width: 100%;

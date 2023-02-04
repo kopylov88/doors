@@ -1100,6 +1100,7 @@ body.noscroll {
   .banner__box {
     max-width: 313px;
     padding: 0;
+    height: auto;
     background-color: transparent;
     -webkit-backdrop-filter: none;
     backdrop-filter: none;
@@ -1185,7 +1186,6 @@ body.noscroll {
 
   .banner__box {
     position: static;
-    height: auto;
   }
 
   .banner__box .button {

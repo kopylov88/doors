@@ -312,10 +312,23 @@ body {
 }
 
 .phone {
+  position: relative;
   font-weight: 500;
   padding: 4px 0;
+  padding-left: 40px;
   font-size: 22px;
   line-height: 1.22;
+}
+
+.phone::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/icons/phone.svg");
 }
 
 .button {
@@ -464,6 +477,11 @@ body.noscroll {
 .modal-successful__body .phone {
   font-weight: 400;
   font-size: 17px;
+}
+
+.modal__body span,
+.modal-successful__body span {
+  margin-right: 10px;
 }
 
 .modal-successful__body {

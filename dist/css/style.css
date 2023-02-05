@@ -680,6 +680,7 @@ body.noscroll {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
+  height: 406px;
 }
 
 .catalog__link::after {
@@ -702,7 +703,8 @@ body.noscroll {
 }
 
 .catalog__link-img {
-  max-width: 628px;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1252,6 +1254,10 @@ body.noscroll {
     max-width: 100%;
     margin-bottom: 60px;
     margin-top: 12px;
+  }
+
+  .catalog__link {
+    height: 308px;
   }
 }
 

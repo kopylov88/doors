@@ -472,11 +472,6 @@ body.noscroll {
   margin-bottom: 20px;
 }
 
-.modal__body .registration__form-input,
-.modal-successful__body .registration__form-input {
-  margin-bottom: 16px;
-}
-
 .modal__body .phone,
 .modal-successful__body .phone {
   font-weight: 400;
@@ -491,7 +486,7 @@ body.noscroll {
 }
 
 .modal-successful__body {
-  min-height: 227px;
+  min-height: 237px;
 }
 
 .modal__title,
@@ -1263,6 +1258,36 @@ body.noscroll {
 
   .catalog__link {
     height: 308px;
+  }
+}
+
+@media (max-width: 350px) {
+  .modal__text {
+    margin-bottom: 5px;
+  }
+
+  .modal__text .modal-successful__body .registration__form-btn,
+  .modal__text .modal__body .registration__form-btn {
+    margin-bottom: 5px;
+  }
+
+  .modal-successful__body,
+  .modal__body {
+    padding: 10px;
+  }
+
+  .modal-successful__title,
+  .modal__title {
+    font-size: 24px;
+  }
+
+  .modal-successful__text,
+  .modal__text {
+    font-size: 14px;
+  }
+
+  .modal-successful__btn {
+    font-size: 16px;
   }
 }
 

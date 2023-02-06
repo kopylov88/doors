@@ -1050,7 +1050,9 @@ body.noscroll {
   }
 
   .gallery__box-item {
-    max-width: none;
+    max-width: 256px;
+    display: block !important;
+    margin: 0 auto 25px;
   }
 
   .gallery__box-item-doors,
@@ -1190,15 +1192,6 @@ body.noscroll {
     display: none;
   }
 
-  .gallery__box-item {
-    max-width: 100%;
-    margin-bottom: 0;
-  }
-
-  .slick-list {
-    padding: 0 15% 0 0;
-  }
-
   .nowebp .banner__inner{
     background-image: url("../img/header-bg-min.jpg"); }
 
@@ -1222,6 +1215,16 @@ body.noscroll {
 
   .registration-box {
     display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .slick-list {
+    padding-right: 20%;
+  }
+
+  .gallery__box-item {
+    height: 330px;
   }
 }
 

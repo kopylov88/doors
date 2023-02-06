@@ -344,6 +344,8 @@ body {
   background: #0285ff;
   transition: 0.3s;
   color: #fff;
+  font-size: 19px;
+  line-height: 1.21;
 }
 
 .no-touch .button:hover {
@@ -749,13 +751,12 @@ body.noscroll {
 }
 
 .registration__form-item {
-  padding-bottom: 15px;
+  margin-bottom: 16px;
 }
 
 .registration__form-input {
   width: 100%;
   background-color: #ebebeb;
-  margin-bottom: 10px;
   padding: 15px 20px;
   border-radius: 8px;
   transition: 0.3s;
@@ -775,13 +776,17 @@ body.noscroll {
   outline: 1px solid #777777;
 }
 
+.registration__form-input.error {
+  margin-bottom: 6px;
+}
+
 .registration__form-btn {
   max-width: 314px;
   background-color: #0285ff;
   border-radius: 8px;
   padding: 13px 20px;
-  font-size: 1.22;
-  line-height: 22px;
+  font-size: 18px;
+  line-height: 1.22;
   color: #fff;
   text-align: left;
   position: relative;

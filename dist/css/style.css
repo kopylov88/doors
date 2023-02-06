@@ -874,6 +874,7 @@ body.noscroll {
 .gallery__banner-title {
   min-height: 360px;
   margin-bottom: 42px;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
@@ -884,6 +885,10 @@ body.noscroll {
 
 .nowebp .gallery__banner-title--doors{
   background-image: url("../img/doors-title.jpg"); }
+
+.gallery__banner-title--doors {
+  background-position: center;
+}
 
 .gallery__banner-title span {
   color: #fff;
@@ -1213,6 +1218,10 @@ body.noscroll {
 
   .gallery__banner-title--doors {
     background-position: center;
+  }
+
+  .registration-box {
+    display: none;
   }
 }
 

@@ -1052,7 +1052,6 @@ body.noscroll {
   .gallery__box-item {
     max-width: 256px;
     display: block !important;
-    margin: 0 auto 25px;
   }
 
   .gallery__box-item-doors,

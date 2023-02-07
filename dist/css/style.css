@@ -1038,6 +1038,8 @@ body.noscroll {
   margin-bottom: 24px;
 }
 
+/* Small Devices, Tablets */
+
 @media (max-width: 1150px) {
   .footer__inner .logo {
     margin-right: 102px;
@@ -1068,6 +1070,17 @@ body.noscroll {
   .gallery__box-item-doors,
   .gallery__box-item-doors--big {
     height: 400px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .animate__animated {
+    /*CSS transitions*/
+    transition-property: none !important;
+    /*CSS transforms*/
+    transform: none !important;
+    /*CSS animations*/
+    animation: none !important;
   }
 }
 

@@ -842,8 +842,8 @@ body.noscroll {
   padding: 32px 0 50px;
 }
 
-.footer__inner .logo {
-  margin-right: 171px;
+.footer__list {
+  margin-left: 497px;
 }
 
 .footer__list-item:not(:last-child) {
@@ -1044,6 +1044,10 @@ body.noscroll {
 @media (max-width: 1150px) {
   .footer__inner .logo {
     margin-right: 102px;
+  }
+
+  .footer__list {
+    margin-left: 0;
   }
 }
 

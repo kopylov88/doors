@@ -379,10 +379,6 @@ body {
   transition: 0.3s;
 }
 
-.error {
-  color: #ee505a;
-}
-
 @font-face {
   font-family: Inter;
   font-display: swap;
@@ -1036,7 +1032,8 @@ body.noscroll {
 }
 
 .just-validate-error-label {
-  margin-bottom: 24px;
+  margin-top: 6px;
+  color: #EE505A !important;
 }
 
 /* Small Devices, Tablets */

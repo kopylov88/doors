@@ -12,14 +12,15 @@ $mail = new PHPMailer;
 $mail->CharSet = 'UTF-8';
 
 // Настройки SMTP
-// $mail->isSMTP();
-// $mail->SMTPAuth = true;
-// $mail->SMTPDebug = 0;
+
+$mail->isSMTP();
+$mail->SMTPAuth = true;
+$mail->SMTPDebug = 0;
  
-// $mail->Host = 'ssl://smtp.gmail.com';
-// $mail->Port = 465;
-// $mail->Username = 'Логин';
-// $mail->Password = 'Пароль';
+$mail->Host = 'ssl://smtp.gmail.com';
+$mail->Port = 465;
+$mail->Username = 'Логин';
+$mail->Password = 'Пароль';
 
 
 $c = true;

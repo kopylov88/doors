@@ -1064,11 +1064,6 @@ body.noscroll {
     height: 440px;
   }
 
-  .gallery__box-item {
-    max-width: 256px;
-    display: block !important;
-  }
-
   .gallery__box-item-doors,
   .gallery__box-item-doors--big {
     height: 400px;
@@ -1245,7 +1240,7 @@ body.noscroll {
 
 @media (max-width: 550px) {
   .slick-list {
-    padding-right: 20%;
+    padding-right: 25%;
   }
 
   .gallery__box-item {
@@ -1295,6 +1290,11 @@ body.noscroll {
 
   .catalog__link {
     height: 308px;
+  }
+
+  .gallery__box-item {
+    max-width: 256px;
+    display: block !important;
   }
 }
 

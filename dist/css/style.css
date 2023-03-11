@@ -1111,6 +1111,7 @@ body.noscroll {
     padding: 50px 16px 24px;
     transform: translateX(-200%);
     background-color: #fff;
+    transition: 0.1s;
   }
 
   .nav__box.open {

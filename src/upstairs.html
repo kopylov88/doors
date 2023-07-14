@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лестницы УЖ</title>
+    <link rel="stylesheet" href="css/style.min.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include('html/header.html', {})
+      <main class="main">
+        <section class="gallery">
+          <div class="container">
+            <div class="gallery__banner-title wow animate__animated animate__fadeIn" data-wow-duration="2s">
+              <span>Лестницы</span>
+            </div>
+            <div class="gallery__inner">
+              <h3 class="gallery__title title">Наши работы</h3>
+              <div class="gallery__box wow animate__animated animate__fadeIn" data-wow-duration="2s">
+                <div class="gallery__box-item">
+                  <img class="" src="@img/upstairs-gallery/1.jpg" alt="gallery image" />
+                </div>
+                <div class="gallery__box-item gallery__box-item--big">
+                  <img class="gallery__box-img" src="@img/upstairs-gallery/4.jpg" alt="gallery image" />
+                </div>
+                <div class="gallery__box-item">
+                  <img class="gallery__box-img" src="@img/upstairs-gallery/7.jpg" alt="gallery image" />
+                </div>
+                <div class="gallery__box-item gallery__box-item--big">
+                  <img class="gallery__box-img" src="@img/upstairs-gallery/2.jpg" alt="gallery image" />
+                </div>
+                <div class="gallery__box-item">
+                  <img class="gallery__box-img" src="@img/upstairs-gallery/5.jpg" alt="gallery image" />
+                </div>
+                <div class="gallery__box-item">
+                  <img class="gallery__box-img" src="@img/upstairs-gallery/8.jpg" alt="gallery image" />
+                </div>
+                <div class="gallery__box-item">
+                  <img class="gallery__box-img" src="@img/upstairs-gallery/3.jpg" alt="gallery image" />
+                </div>
+                <div class="gallery__box-item gallery__box-item--big">
+                  <img class="gallery__box-img" src="@img/upstairs-gallery/6.jpg" alt="gallery image" />
+                </div>
+                <div class="gallery__box-item">
+                  <img class="gallery__box-img" src="@img/upstairs-gallery/9.jpg" alt="gallery image" />
+                </div>
+              </div>
+              <div class="registration-box">
+                <div class="registration-box__inner">
+                  <h4 class="registration-box__title title">Записаться на консультацию</h4>
+                  <button class="button" type="submit">Записаться на консультацию</button>
+                </div>
+              </div>
+              <div class="modal">
+                <div class="modal__wrap">
+                  <div class="modal__body">
+                    <h5 class="modal__title">Записаться на консультацию</h5>
+                    <p class="modal__text">
+                      Чтобы заказать консультацию, заполните форму, и мы свяжемся с вами в ближайшее время!
+                    </p>
+                    <form class="registration__form" id="registration__form-popup" action="#" method="POST">
+                      <div class="registration__form-item">
+                        <input class="registration__form-input userNamePopup" name="userName" type="text"
+                          placeholder="Имя" autocomplete="off" required />
+                      </div>
+                      <div class="registration__form-item">
+                        <input class="registration__form-input userPhonePopup" name="userPhone" type="tel"
+                          placeholder="Номер телефона" autocomplete="off" required />
+                      </div>
+                      <button class="registration__form-btn" type="submit">Отправить</button>
+                    </form>
+                    <div class="close">
+                      <img src="@img/icons/close.svg" alt="close icon" />
+                    </div>
+                    <div class="modal__phone">
+                      <span class="modal__phone-text">Или позвоните по номеру</span>
+                      <a class="phone" href="tel:+380503724206">+380503724206</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-successful">
+                <div class="modal-successful__wrap">
+                  <div class="modal-successful__body">
+                    <h5 class="modal-successful__title">Ваша заявка отправлена!</h5>
+                    <p class="modal-successful__text">Мы свяжемся с Вами в ближайшее время</p>
+                    <a class="modal-successful__btn" href="index.html">Вернуться на главный экран</a>
+                    <div class="modal-successful__close">
+                      <img src="@img/icons/close.svg" alt="close icon" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <section class="gallery gallery-bottom wow animate__animated animate__fadeIn" data-wow-duration="2s">
+                <div class="gallery__box">
+                  <div class="gallery__box-item">
+                    <img class="" src="@img/upstairs-gallery/10.jpg" alt="gallery image" />
+                  </div>
+                  <div class="gallery__box-item gallery__box-item--big">
+                    <img class="gallery__box-img" src="@img/upstairs-gallery/11.jpg" alt="gallery image" />
+                  </div>
+                  <div class="gallery__box-item gallery__box-item--big">
+                    <img class="gallery__box-img" src="@img/upstairs-gallery/12.jpg" alt="gallery image" />
+                  </div>
+                  <div class="gallery__box-item">
+                    <img class="gallery__box-img" src="@img/upstairs-gallery/13.jpg" alt="gallery image" />
+                  </div>
+                  <div class="gallery__box-item">
+                    <img class="gallery__box-img" src="@img/upstairs-gallery/14.jpg" alt="gallery image" />
+                  </div>
+                  <div class="gallery__box-item gallery__box-item--big">
+                    <img class="gallery__box-img" src="@img/upstairs-gallery/15.jpg" alt="gallery image" />
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </section>
+        <section class="registration">
+          <div class="container">
+            <div class="registration__inner">
+              <div class="registration__content">
+                <h2 class="registration__content-title title">Записаться на консультацию</h2>
+                <p class="registration__content-text">
+                  Чтобы заказать консультацию, заполните форму, и мы свяжемся с вами в ближайшее время!
+                </p>
+              </div>
+              <form class="registration__form" id="registration__form" action="#" method="POST">
+                <div class="registration__form-item">
+                  <input class="registration__form-input userName" name="userName" type="text" placeholder="Имя"
+                    autocomplete="off" required />
+                </div>
+                <div class="registration__form-item">
+                  <input class="registration__form-input userPhone" name="userPhone" type="tel"
+                    placeholder="Номер телефона" autocomplete="off" required />
+                </div>
+                <button class="registration__form-btn" type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </section>
+        <div class="up-btn"></div>
+      </main>
+      @@include('html/footer.html', {})
+      <script src="js/app.min.js"></script>
+    </div>
+  </body>
+</html>

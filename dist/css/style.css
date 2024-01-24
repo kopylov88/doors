@@ -611,7 +611,7 @@ body.noscroll {
   background-image: url("../img/header-bg.jpg"); }
 
 .banner__inner {
-  height: calc(100vh - 80px);
+  height: calc(100dvh - 80px);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1268,7 +1268,7 @@ body.noscroll {
     align-items: flex-end;
     padding: 16px;
     margin-bottom: 0;
-    height: calc(100vh - 165px);
+    height: calc(100dvh - 165px);
   }
 
   .banner__box {

@@ -1332,6 +1332,12 @@ body.noscroll {
   }
 }
 
+@media (max-height: 650px) {
+  .banner__inner {
+    height: 600px;
+  }
+}
+
 .webp .banner__inner{ background-image: url(../img/header-bg.webp); }
 
 .webp .gallery__banner-title{ background-image: url(../img/upstairs-title.webp); }

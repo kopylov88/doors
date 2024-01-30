@@ -276,3 +276,9 @@
     font-size: 16px;
   }
 }
+
+@media(max-height: 650px) {
+  .banner__inner {
+    height: 600px;
+  }
+}

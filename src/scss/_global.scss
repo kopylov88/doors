@@ -1,34 +1,6 @@
-input::-webkit-input-placeholder {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-input::-moz-placeholder {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-input:-moz-placeholder {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-input:-ms-input-placeholder {
-  opacity: 1;
-  transition: opacity 0.3s ease;
-}
-input:focus::-webkit-input-placeholder {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-input:focus::-moz-placeholder {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-input:focus:-moz-placeholder {
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-input:focus:-ms-input-placeholder {
-  opacity: 0;
-  transition: opacity 0.3s ease;
+html {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -37,32 +9,39 @@ body {
   font-size: 17px;
   color: #3a3a3a;
 }
+
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
+
 .main {
   flex: 1 1 auto;
 }
+
 .container {
   max-width: 1310px;
   padding: 0 15px;
   margin: 0 auto;
 }
+
 .logo {
   display: flex;
   align-items: center;
   column-gap: 14px;
   flex-shrink: 0;
+
   path {
     transition: 0.3s;
   }
+
   .no-touch &:hover {
     path {
       fill: #0285ff;
     }
   }
+
   .no-touch &:active {
     path {
       fill: #1300e8;
@@ -70,6 +49,7 @@ body {
     }
   }
 }
+
 .phone {
   position: relative;
   font-weight: 500;
@@ -77,6 +57,7 @@ body {
   padding-left: 40px;
   font-size: 22px;
   line-height: 1.22;
+
   &::before {
     content: '';
     position: absolute;
@@ -88,6 +69,7 @@ body {
     background-image: url('@img/icons/phone.svg');
   }
 }
+
 .button {
   display: flex;
   justify-content: center;
@@ -101,13 +83,16 @@ body {
   color: #fff;
   font-size: 19px;
   line-height: 1.21;
+
   .no-touch &:hover {
     background-color: #0249ff;
   }
+
   .no-touch &:active {
     background-color: #1300e8;
   }
 }
+
 .title {
   font-weight: 500;
   font-size: 36px;
@@ -115,11 +100,13 @@ body {
   color: #494949;
   letter-spacing: 0.035em;
 }
+
 .menu-btn {
   display: none;
   flex-direction: column;
   justify-content: space-between;
   min-height: 20px;
+
   span {
     width: 30px;
     height: 3px;
@@ -127,4 +114,3 @@ body {
     transition: 0.3s;
   }
 }
-

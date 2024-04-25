@@ -221,17 +221,11 @@ legend {
   display: none;
 }
 
-html {
-  width: 100vw;
-  overflow-x: hidden;
-}
-
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 17px;
   color: #3a3a3a;
-  height: 100vh;
 }
 
 .wrapper {

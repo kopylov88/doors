@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лестницы УЖ</title>
+  <link rel="stylesheet" href="css/style.min.css?_v=20240425151910" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+  <div class="container">
+    <div class="header__inner">
+      <nav class="nav">
+        <a class="logo" href="index.html">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <path d="M1.8 1.8H22C26.5287 1.8 30.2 5.47127 30.2 10V30.2H10C5.47127 30.2 1.8 26.5287 1.8 22V1.8Z"
+              fill="white" stroke="#0285FF" stroke-width="3.6" />
+          </svg>
+          Лестницы УЖ
+        </a>
+        <div class="nav__box">
+          <ul class="nav__menu">
+            <li class="nav__menu-item wow animate__animated animate__fadeIn" data-wow-delay="0.2s">
+              <a href="index.html" class="nav__menu-link active">Главная</a>
+            </li>
+            <li class="nav__menu-item wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
+              <a href="upstairs.html" class="nav__menu-link">Лестницы</a>
+            </li>
+            <li class="nav__menu-item wow animate__animated animate__fadeIn" data-wow-delay="0.6s">
+              <a href="doors.html" class="nav__menu-link">Двери</a>
+            </li>
+          </ul>
+          <div class="nav__phone-box">
+            <div class="nav__phone">
+              <a class="phone" href="tel:+380503724206">+380503724206</a>
+            </div>
+            <a class="button" href="#">Записаться на консультацию</a>
+          </div>
+        </div>
+        <button class="menu-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </nav>
+    </div>
+  </div>
+</header>
+    <main class="main">
+      <div class="banner">
+        <div class="container">
+          <div class="banner__inner">
+            <div class="banner__box wow animate__animated animate__fadeIn" data-wow-duration="2s">
+              <h1 class="banner__box-title">Лестницы и двери</h1>
+              <p class="banner__box-text">
+                Под ключ в Закарпатской области. Надежность и уют для вашего дома!
+              </p>
+              <a class="button" href="#">Записаться на консультацию</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="about" id="about">
+        <div class="container">
+          <div class="about__inner wow animate__animated animate__fadeIn" data-wow-duration="2s">
+            <a class="button" href="#">Записаться на консультацию</a>
+            <h2 class="about__title title">Про нас</h2>
+            <div class="about__text">
+              <p class="about__text-item">
+                Мы консультируем, производим, монтируем качественные лестницы и двери под заказ. Материал для лестницы -
+                ясень, для дверей: сосна и ясень. Лестница изготовляется на бетонную основу, металлический каркас и на
+                деревянные косогуры.
+              </p>
+              <p class="about__text-item">
+                Каждая стремянка индивидуальна, и ее стоимость зависит от размеров материалов и комплектующих. Уже
+                более пятнадцати лет наши клиенты удовлетворены нашим трудом и советуют нам знакомым.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="catalog">
+        <div class="container">
+          <div class="catalog__inner wow animate__animated animate__fadeIn" data-wow-duration="2s">
+            <a class="catalog__link" href="upstairs.html">
+              <picture><source srcset="img/upstairs.webp" type="image/webp"><img class="catalog__link-img" src="img/upstairs.jpg" alt="upstairs" /></picture>
+              <span class="catalog__link-text">Лестницы</span>
+            </a>
+            <a class="catalog__link" href="doors.html">
+              <picture><source srcset="img/doors.webp" type="image/webp"><img class="catalog__link-img" src="img/doors.jpg" alt="doors" /></picture>
+              <span class="catalog__link-text">Двери</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <section class="registration">
+        <div class="container">
+          <div class="registration__inner">
+            <div class="registration__content">
+              <h2 class="registration__content-title title">Записаться на консультацию</h2>
+              <p class="registration__content-text">
+                Чтобы заказать консультацию, заполните форму, и мы свяжемся с вами в ближайшее время!
+              </p>
+            </div>
+            <form class="registration__form" id="registration__form" action="#" method="POST">
+              <div class="registration__form-item">
+                <input class="registration__form-input userName" name="userName" type="text" placeholder="Имя"
+                  autocomplete="off" required />
+              </div>
+              <div class="registration__form-item">
+                <input class="registration__form-input userPhone" name="userPhone" type="tel"
+                  placeholder="Номер телефона" autocomplete="off" required />
+              </div>
+              <button class="registration__form-btn" type="submit">Отправить</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <div class="up-btn"></div>
+    </main>
+    <div class="modal">
+  <div class="modal__wrap">
+    <div class="modal__body">
+      <button class="close">
+        <img src="img/icons/close.svg" alt="close icon" />
+      </button>
+      <h5 class="modal__title">Записаться на консультацию</h5>
+      <p class="modal__text">
+        Чтобы заказать консультацию, заполните форму, и мы свяжемся с вами в ближайшее время!
+      </p>
+      <form class="registration__form" id="registration__form-popup" action="#" method="POST">
+        <div class="registration__form-item">
+          <input class="registration__form-input userNamePopup" name="userName" type="text" placeholder="Имя"
+            autocomplete="off" required />
+        </div>
+        <div class="registration__form-item">
+          <input class="registration__form-input userPhonePopup" name="userPhone" type="tel"
+            placeholder="Номер телефона" autocomplete="off" required />
+        </div>
+        <button class="registration__form-btn" type="submit">Отправить</button>
+      </form>
+      <span>Или позвоните по номеру</span>
+      <a class="phone" href="tel:+380503724206">+380503724206</a>
+    </div>
+  </div>
+</div>
+<div class="modal-successful">
+  <div class="modal-successful__wrap">
+    <div class="modal-successful__body">
+      <button class="modal-successful__close">
+        <img src="img/icons/close.svg" alt="close icon" />
+      </button>
+      <h5 class="modal-successful__title">Ваша заявка отправлена!</h5>
+      <p class="modal-successful__text">Мы свяжемся с Вами в ближайшее время</p>
+      <a class="modal-successful__btn" href="index.html">Вернуться на главный экран</a>
+    </div>
+  </div>
+</div>
+    <footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <a class="logo" href="index.html">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+          <path
+            d="M1.8 1.8H22C26.5287 1.8 30.2 5.47127 30.2 10V30.2H10C5.47127 30.2 1.8 26.5287 1.8 22V1.8Z"
+            fill="transparent"
+            stroke="#0285FF"
+            stroke-width="3.6"
+          />
+        </svg>
+        Лестницы УЖ
+      </a>
+      <ul class="footer__list">
+        <li class="footer__list-item">
+          <a class="footer__list-link" href="index.html">Главная</a>
+        </li>
+        <li class="footer__list-item">
+          <a class="footer__list-link" href="upstairs.html">Лестницы</a>
+        </li>
+        <li class="footer__list-item">
+          <a class="footer__list-link" href="doors.html">Двери</a>
+        </li>
+      </ul>
+      <div class="footer__contacts">
+        <div class="footer__phone">
+          <a class="phone" href="tel:+380503724206">+380503724206</a>
+          <a class="button" href="#">Записаться на консультацию</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    <script src="js/app.min.js?_v=20240425151910"></script>
+  </div>
+</body>
+
+</html>

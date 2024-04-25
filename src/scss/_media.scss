@@ -1,0 +1,284 @@
+@media (max-width: 1150px) {
+  .footer__inner .logo {
+    margin-right: 102px;
+  }
+
+  .footer__list {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .about__text {
+    column-gap: 50px;
+  }
+
+  .gallery__box {
+    column-count: 1;
+    margin-bottom: 25px;
+  }
+
+  .gallery__box-item--big {
+    height: 440px;
+  }
+
+  .gallery__box-item-doors,
+  .gallery__box-item-doors--big {
+    height: 400px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-btn {
+    display: flex;
+    margin-left: auto;
+  }
+
+  .menu-btn.clicked span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-btn.clicked span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-btn.clicked span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .nav__box {
+    position: absolute;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    top: 80px;
+    left: 0;
+    right: 0;
+    height: calc(100vh - 80px);
+    padding: 50px 16px 24px;
+    transform: translateX(-200%);
+    background-color: #fff;
+    transition: .1s;
+
+    &.open {
+      transform: translateX(0);
+      transition: .3s;
+
+      .nav__phone-box {
+        margin-left: 0;
+        width: 100%;
+      }
+
+      .button {
+        max-width: 100%;
+        display: flex;
+        margin-top: 24px;
+      }
+    }
+  }
+
+  .nav__menu {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .nav__menu-item:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 28px;
+  }
+
+  .footer__inner {
+    flex-direction: column;
+  }
+
+  .footer__list {
+    margin-bottom: 56px;
+  }
+
+  .footer__inner .logo {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .footer__contacts {
+    margin-left: 0;
+  }
+
+  .banner__inner {
+    background-image: url('@img/header-bg-min.jpg');
+    background-position: center;
+  }
+
+  .banner__box-title {
+    font-size: 42px;
+  }
+
+  .banner__box-text {
+    font-size: 16px;
+  }
+
+  .banner__box {
+    max-width: 313px;
+    padding: 0;
+    height: auto;
+    background-color: transparent;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  .catalog {
+    padding-top: 42px;
+  }
+
+  .catalog__inner {
+    flex-direction: column;
+    row-gap: 16px;
+  }
+
+  .registration__inner {
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .about {
+    padding-bottom: 18px;
+  }
+
+  .registration {
+    padding-top: 18px;
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 650px) {
+  .about__text {
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  .gallery-bottom {
+    display: none;
+  }
+
+  .gallery__banner-title {
+    background-image: url('@img/upstairs-title-min.jpg');
+    background-position: center;
+  }
+
+  .gallery__banner-title--doors {
+    background-image: url('@img/doors-title-min.jpg');
+    background-position: center;
+  }
+
+  .registration-box {
+    display: none;
+  }
+}
+
+@media (max-width: 550px) {
+  .slick-list {
+    padding-right: 25%;
+  }
+
+  .gallery__box-item {
+    height: 330px;
+  }
+}
+
+@media (max-width: 400px) {
+
+  .modal__body,
+  .modal-successful__body {
+    padding: 15px;
+  }
+
+  .banner__box-title {
+    font-size: 36px;
+  }
+
+  .banner__box-text {
+    margin-bottom: 0;
+  }
+
+  .banner__inner {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 16px;
+    margin-bottom: 0;
+    height: calc(100dvh - 165px);
+  }
+
+  .banner__box {
+    position: static;
+
+    .button {
+      display: none;
+    }
+  }
+
+  .about__inner {
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      margin-bottom: 60px;
+      margin-top: 12px;
+    }
+  }
+
+  .catalog__link {
+    height: 308px;
+  }
+
+  .gallery__box-item {
+    max-width: 256px;
+    display: block !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .modal__text {
+    margin-bottom: 5px;
+
+    .modal-successful__body .registration__form-btn,
+    .modal__body .registration__form-btn {
+      margin-bottom: 5px;
+    }
+  }
+
+  .modal-successful__body,
+  .modal__body {
+    padding: 10px;
+  }
+
+  .modal-successful__title,
+  .modal__title {
+    font-size: 24px;
+  }
+
+  .modal-successful__text,
+  .modal__text {
+    font-size: 14px;
+  }
+
+  .modal-successful__btn {
+    font-size: 16px;
+  }
+
+  .button {
+    font-size: 16px;
+  }
+}
+
+@media(max-height: 650px) {
+  .banner__inner {
+    height: 600px;
+  }
+}

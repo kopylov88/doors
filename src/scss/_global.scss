@@ -1,0 +1,117 @@
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  color: #3a3a3a;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+.container {
+  max-width: 1310px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 14px;
+  flex-shrink: 0;
+
+  path {
+    transition: 0.3s;
+  }
+
+  .no-touch &:hover {
+    path {
+      fill: #0285ff;
+    }
+  }
+
+  .no-touch &:active {
+    path {
+      fill: #1300e8;
+      stroke: #1300e8;
+    }
+  }
+}
+
+.phone {
+  position: relative;
+  font-weight: 500;
+  padding: 4px 0;
+  padding-left: 40px;
+  font-size: 22px;
+  line-height: 1.22;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-image: url('@img/icons/phone.svg');
+  }
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 300px;
+  min-height: 60px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #0285ff;
+  transition: 0.3s;
+  color: #fff;
+  font-size: 19px;
+  line-height: 1.21;
+
+  .no-touch &:hover {
+    background-color: #0249ff;
+  }
+
+  .no-touch &:active {
+    background-color: #1300e8;
+  }
+}
+
+.title {
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 1.13;
+  color: #494949;
+  letter-spacing: 0.035em;
+}
+
+.menu-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 20px;
+
+  span {
+    width: 30px;
+    height: 3px;
+    background-color: #373a39;
+    transition: 0.3s;
+  }
+}

@@ -221,6 +221,10 @@ legend {
   display: none;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 body {
   font-family: "Inter", sans-serif;
   font-weight: 400;

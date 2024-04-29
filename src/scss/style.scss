@@ -222,13 +222,17 @@ body.noscroll {
 .banner {
   &__inner {
     height: calc(100dvh - 80px);
+    margin-bottom: 20px;
+  }
+
+  &__inner-box {
+    position: relative;
+    height: 97%;
     background-image: url('@img/header-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     border-radius: 20px;
-    margin-bottom: 42px;
-    position: relative;
   }
 
   &__box {

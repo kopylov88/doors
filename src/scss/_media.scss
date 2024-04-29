@@ -105,7 +105,7 @@
     margin-left: 0;
   }
 
-  .banner__inner {
+  .banner__inner-box {
     background-image: url('@img/header-bg-min.jpg');
     background-position: center;
   }
@@ -191,7 +191,6 @@
 }
 
 @media (max-width: 400px) {
-
   .modal__body,
   .modal-successful__body {
     padding: 15px;
@@ -206,12 +205,16 @@
   }
 
   .banner__inner {
+    height: calc(100dvh - 175px);
+  }
+
+  .banner__inner-box {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    height: 100%;
     padding: 16px;
     margin-bottom: 0;
-    height: calc(100dvh - 165px);
   }
 
   .banner__box {

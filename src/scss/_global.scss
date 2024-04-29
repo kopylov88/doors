@@ -1,4 +1,4 @@
-html  {
+html {
   scrollbar-gutter: stable;
 }
 
@@ -66,6 +66,11 @@ body {
     width: 24px;
     height: 24px;
     background-image: url('@img/icons/phone.svg');
+  }
+
+  &:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
   }
 }
 
